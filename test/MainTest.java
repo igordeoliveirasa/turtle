@@ -7,6 +7,8 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import codility.Codility;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -16,11 +18,11 @@ public class MainTest {
 
     public MainTest() {
     }
-   
+    
     @Test
     public void hello() {
+        int[]A = new int[]{1,3,2,5,4,4,6,3,2};
         Codility codility = new Codility();
-        assertArrayEquals(codility.solution(new int[] {1,0,0,1,1}), new int[]{1,1,0,1});
-        assertArrayEquals(codility.solution(new int[] {1,0,0,1,1,1}), new int[]{1,1,0,1,0,1,1});
+        assertEquals(codility.solution(A), 7);
     }       
 }
